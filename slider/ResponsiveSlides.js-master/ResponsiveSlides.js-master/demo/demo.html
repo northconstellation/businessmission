@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ResponsiveSlides.js &middot; Responsive jQuery slideshow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../responsiveslides.css">
+  <link rel="stylesheet" href="demo.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="../responsiveslides.min.js"></script>
+  <script>
+
+    // You can also use "$(window).load(function() {"
+    $(function () {
+
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="wrapper">
+
+    <!-- Slideshow 4 -->
+    <div class="callbacks_container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="img/1.png" alt="">
+          <div class="caption">Мы делаем жизнь женщины богаче</div>
+        </li>
+        <li>
+          <img src="img/2.png" alt="">
+            <div class="caption">Организовать всю имеющуюся в мире информацию, сделав её доступной
+                и удобной для использования</div>
+        </li>
+        <li>
+          <img src="img/3.png" alt="">
+            <div class="caption">Наша миссия Майкрософт состоит в том, чтобы помочь людям и бизнес-организациям
+                по всему миру полностью реализовать свой полный потенциал.
+            </div>
+        </li>
+          <li>
+              <img src="img/4.png" alt="">
+              <div class="caption">Мы работаем для того, чтобы взрослые и дети проводили больше времени вместе</div>
+          </li>
+
+          <li>
+              <img src="img/5.png" alt="">
+              <div class="caption">Дать людям возможность общаться и сделать мир более открытым и единым</div>
+          </li>
+
+          <li>
+              <img src="img/6.png" alt="">
+              <div class="caption">Изменить к лучшему повседневную жизнь простых людей</div>
+          </li>
+
+          <li>
+              <img src="img/7.png" alt="">
+              <div class="caption">Распространение знаний с помощью документов</div>
+          </li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
